@@ -13,9 +13,7 @@ const GifSearchApp = () => {
   const apiKey = "sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh";
   const apiUrl = "https://api.giphy.com/v1/gifs/search";
 
-  useEffect(() => {
-    fetchGifs();
-  }, [limit]);
+
 
   const fetchGifs = async () => {
     setIsLoading(true);
@@ -41,6 +39,12 @@ const GifSearchApp = () => {
     }
   };
 
+  useEffect(() => {
+
+    fetchGifs();
+    // eslint-disable-next-line
+  }, [limit]);
+
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
     setOffset(0);
@@ -53,7 +57,7 @@ const GifSearchApp = () => {
       document.documentElement.offsetHeight
     ) {
       if (!isLoading) {
-        setLimit(limit + 50);
+        setLimit(limit + 20);
       }
     }
   };
@@ -63,6 +67,7 @@ const GifSearchApp = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    // eslint-disable-next-line
   }, [isLoading]);
 
   const handleSearch = () => {
@@ -89,8 +94,8 @@ const GifSearchApp = () => {
         </div>
       </div>
       <div className=" mx-16 mt-8 p-4  gap-4 parent bg-[#181818]  ">
-        <Gifs data={gifs}/>
-        
+        <Gifs data={gifs} />
+
         {isLoading && (
           <div className="flex justify-center  w-full h-screen mt-4">
             <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
