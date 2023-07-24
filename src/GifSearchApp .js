@@ -48,7 +48,6 @@ const GifSearchApp = () => {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
     setOffset(0);
-    setLimit(16)
   };
 
   const handleScroll = () => {
@@ -71,7 +70,9 @@ const GifSearchApp = () => {
   }, [isLoading]);
 
   const handleSearch = () => {
+    setLimit(16)
     fetchGifs();
+
   }
 
 
