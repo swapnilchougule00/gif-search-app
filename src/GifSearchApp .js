@@ -56,7 +56,7 @@ const GifSearchApp = () => {
       document.documentElement.offsetHeight
     ) {
       if (!isLoading) {
-        setLimit(limit + 20);
+        setLimit(limit + 4);
       }
     }
   };
@@ -78,8 +78,8 @@ const GifSearchApp = () => {
 
 
   return (
-    <div className="bg-[#252525] h-full text-white w-full ">
-      <div className="px-10 py-6 bg-[#181818]">
+    <div className=" pb-4 text-white w-full ">
+      <div className="px-10 py-6  bg-[#181818]">
 
         <h1 className="text-4xl tracking-widest text-center font-semibold mb-4">GIPHY</h1>
         <div className="mb-4 flex justify-center gap-6">
@@ -91,10 +91,10 @@ const GifSearchApp = () => {
             onChange={handleSearchChange}
           />
 
-          <button onClick={handleSearch} className="py-2 px-4 tracking-wide  hover:outline-1 transition-all duration-200 hover:outline hover:outline-offset-4 outline-white rounded-lg bg-green-700">Search</button>
+          <button onClick={handleSearch} className="py-2 px-4 tracking-wide  outline-1 transition-all duration-200 -outline-offset-4 outline hover:outline-offset-4 outline-white/50 rounded-lg bg-green-700">Search</button>
         </div>
       </div>
-      <div className=" mx-16 mt-8 p-4  gap-4 parent bg-[#181818]  ">
+      <div className=" mx-16 mt-8 p-6 rounded-lg  gap-4  bg-[#181818]  ">
         <Gifs data={gifs} />
 
         {isLoading && (

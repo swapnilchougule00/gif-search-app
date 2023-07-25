@@ -15,6 +15,10 @@
     background-clip: padding-box;
   }
 
+  body{
+    background-color: #252525;
+  }
+
   /* Style your items */
   .my-masonry-grid_column > img {
     /* change div to reference your elements you put in <Masonry> */
@@ -22,7 +26,9 @@
     margin-bottom: 30px;
   }
 
-
+.my-masonry-grid:hover > img:not(:hover){
+  opacity: 0.3;
+}
 
 
   .loader {

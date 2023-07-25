@@ -2,7 +2,8 @@ import GifSearchApp from "./GifSearchApp ";
 
 function App() {
   return (
-    <GifSearchApp/>
+
+      <GifSearchApp />
   );
 }
 

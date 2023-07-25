@@ -15,7 +15,7 @@ function Gifs({ data }) {
     return (
         <Masonry
             breakpointCols={breakpointColumnsObj}
-            className="my-masonry-grid "
+            className="my-masonry-grid"
             columnClassName="my-masonry-grid_column">
             {data.map((gif) => (
 
